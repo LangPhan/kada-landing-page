@@ -9,3 +9,8 @@
     font-family: "Nunito", sans-serif;
   }
 }
+@layer utilities {
+  .translate3d {
+    transform: translate3d(-25%, 0, 0);
+  }
+}
