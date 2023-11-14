@@ -4,7 +4,7 @@ import HeroBannerSection from "./components/HeroBanner";
 
 export default function Home() {
   return (
-    <main className="min-h-screen">
+    <main className="background-wrapper min-h-screen">
       <Header />
       <HeroBannerSection />
       <Category />

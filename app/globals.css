@@ -14,3 +14,33 @@
     transform: translate3d(-25%, 0, 0);
   }
 }
+@layer components {
+  .background-wrapper {
+    background-image: url(//www.rollienation.com/cdn/shop/files/updated-mobile_268cb083-ef80-4061-ab6d-ebf887c4489a_750x.jpg?v=1661484658);
+    background-repeat: no-repeat;
+    background-position: 50%;
+    background-acttachment: fixed;
+    background-size: cover;
+  }
+  .scrollable {
+    overflow-x: scroll;
+  }
+  .scrollable::-webkit-scrollbar {
+    display: none;
+  }
+  .dynamic-width {
+    width: clamp(15rem, 64vw, 21.25rem);
+  }
+  .dynamic-width-lg {
+    width: clamp(21.25rem, 29.51vw, 26.5625rem);
+  }
+  .dynamic-width-xl {
+    width: min(27.5vw, 34.375rem);
+  }
+  .text-title-lg {
+    font-size: min(12.5rem, 13.8888888889vw);
+  }
+  .text-title-xl {
+    font-size: min(15rem, 12vw);
+  }
+}
