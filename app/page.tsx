@@ -1,4 +1,8 @@
+import BestSeller from "./components/BestSeller";
 import Category from "./components/Category";
+import Classic from "./components/Classic";
+import Footer from "./components/Footer";
+import Gravity from "./components/Gravity";
 import Header from "./components/Header";
 import HeroBannerSection from "./components/HeroBanner";
 
@@ -8,6 +12,10 @@ export default function Home() {
       <Header />
       <HeroBannerSection />
       <Category />
+      <BestSeller />
+      <Gravity />
+      <Classic />
+      <Footer />
     </main>
   );
 }

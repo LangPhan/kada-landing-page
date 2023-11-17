@@ -2,13 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;500;600;800&display=swap");
-
-@layer base {
-  body {
-    font-family: "Nunito", sans-serif;
-  }
-}
 @layer utilities {
   .translate3d {
     transform: translate3d(-25%, 0, 0);
@@ -37,10 +30,66 @@
   .dynamic-width-xl {
     width: min(27.5vw, 34.375rem);
   }
+  .dynamic-width-br {
+    width: clamp(11.75rem, 50.1vw, 21.25rem);
+  }
+  .dynamic-width-br-lg {
+    width: clamp(21.25rem, 30.21vw, 27.1875rem);
+  }
+  .dynamic-width-br-2xl {
+    width: clamp(27.875rem, 30vw, 37.5rem);
+  }
+
+  .width-c-lg {
+    width: min(60.97%, 19.8125rem);
+    margin-bottom: 1.5rem;
+  }
+  .width-c-2xl {
+    width: min(59.12%, 25.3125rem);
+    margin-bottom: 5rem;
+  }
+
+  .grid-md {
+    grid-template-columns: 1fr 49.1379310345%;
+    grid-template-rows: 1fr;
+    gap: 2.1875rem;
+  }
+  .grid-lg {
+    gap: min(6%, 4.375rem);
+  }
+  .grid-2xl {
+    gap: min(7.875%, 7.875rem);
+    grid-template-columns: 1fr 49.3125%;
+  }
+
+  .text-c-lg {
+    font-size: min(5.5rem, 6.11vw);
+    line-height: 1;
+  }
+  .text-c-2xl {
+    font-size: min(7.5rem, 6vw);
+  }
+
   .text-title-lg {
     font-size: min(12.5rem, 13.8888888889vw);
   }
   .text-title-xl {
     font-size: min(15rem, 12vw);
+  }
+
+  .text-classic-lg {
+    font-size: min(9rem, 10vw);
+    line-height: 0.94;
+    letter-spacing: -0.02em;
+  }
+  .text-classic-2xl {
+    font-size: min(12.5rem, 10vw);
+    line-height: 0.96;
+  }
+  .padding-classic-lg {
+    padding: 8rem min(9.73%, 8.75rem) 11.25rem;
+  }
+  .padding-classic-2xl {
+    padding: 11.25rem min(10%, 12.5rem) 15rem;
   }
 }
