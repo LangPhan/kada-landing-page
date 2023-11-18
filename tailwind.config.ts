@@ -14,6 +14,8 @@ const config: Config = {
       animation: {
         marquee: 'marquee 15s linear infinite',
         slideText: 'slideText 5s linear infinite',
+        floatUp: 'floatUp 6s ease-in infinite',
+        floatDown: 'floatDown 6s ease-in infinite',
       },
       keyframes: {
         marquee: {
@@ -24,6 +26,16 @@ const config: Config = {
           '0%': { transform: 'translateX(-100%)' },
           '100%': { transform: 'translateX(100%)' }
         },
+        floatUp: {
+          '0%': { transform: 'translateZ(0)' },
+          '50%': { transform: 'translate3d(0,-0.875rem,0)' },
+          '100%': { transform: 'translateZ(0)' }
+        },
+        floatDown: {
+          '0%': { transform: 'translateZ(0)' },
+          '50%': { transform: 'translate3d(0,0.875rem,0)' },
+          '100%': { transform: 'translateZ(0)' }
+        }
       }
     },
   },

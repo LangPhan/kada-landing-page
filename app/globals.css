@@ -115,4 +115,20 @@
     max-width: max(65%, 12.8125rem);
     margin-bottom: 1.4375rem;
   }
+  .form-contact__title2xl {
+    font-size: min(9rem, 10vw);
+    line-height: 0.94;
+    letter-spacing: -0.02em;
+  }
+  .form-contact__titlelg {
+    font-size: min(6rem, 8vw);
+    line-height: 0.94;
+    letter-spacing: -0.02em;
+  }
+  .form-contact__input {
+    width: calc(100% + 1.25rem);
+  }
+  .form-contact__input-xl {
+    width: calc(100% + 2rem);
+  }
 }
