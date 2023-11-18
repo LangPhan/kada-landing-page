@@ -6,6 +6,7 @@ import Footer from "./components/Footer";
 import Gravity from "./components/Gravity";
 import Header from "./components/Header";
 import HeroBannerSection from "./components/HeroBanner";
+import Highlight from "./components/Highlight";
 
 export default function Home() {
   return (
@@ -15,6 +16,7 @@ export default function Home() {
       <Category />
       <BestSeller />
       <Gravity />
+      <Highlight />
       <Classic />
       <Contact />
       <Footer />
