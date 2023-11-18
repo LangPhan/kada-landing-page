@@ -38,7 +38,12 @@ export default function Gravity() {
   ];
   const [item, setItem] = useState<Item>(items[0]);
   return (
-    <section className="relative bg-white px-6 pb-[1.9375rem] pt-12 lg:py-10 2xl:py-32">
+    <section
+      className="relative bg-white px-6 pb-[1.9375rem] pt-12 after:absolute after:-bottom-[1.9375rem]
+     after:left-0 after:h-8 after:w-full after:rounded-b-3xl after:bg-white after:content-[''] lg:py-10 2xl:py-32 
+    2xl:before:-top-[2.4375rem] 2xl:before:h-10
+    2xl:before:rounded-t-[2.5rem] 2xl:after:-bottom-[2.4375rem] 2xl:after:h-10 2xl:after:rounded-b-[2.5rem]"
+    >
       <div className="md:grid-md lg:grid-lg 2xl:grid-2xl grid">
         <Content url={item.medium} />
         <Album listImages={items} item={item} setItem={setItem} />

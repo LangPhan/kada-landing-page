@@ -131,4 +131,22 @@
   .form-contact__input-xl {
     width: calc(100% + 2rem);
   }
+  .highlight-content {
+    font-size: 3rem;
+    line-height: 1.16;
+    letter-spacing: -0.02em;
+    margin-bottom: 1.5625rem;
+    font-weight: 600;
+  }
+  .highlight-content-lg {
+    font-size: min(3.5rem, 3.8888888vw);
+    line-height: 1.14;
+    margin-bottom: 2.5rem;
+  }
+  .highlightg-content-2xl {
+    font-size: min(5rem, 4vw);
+    line-height: 1.1;
+    margin-bottom: 4rem;
+    font-weight: 700;
+  }
 }

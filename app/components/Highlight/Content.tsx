@@ -5,8 +5,8 @@ type props = {
 };
 export default function Content({ lineShow }: props) {
   return (
-    <div className="col-span-3 sm:col-span-2">
-      <p className="mb-6 text-[2.375rem] font-semibold leading-[1.26] tracking-normal">
+    <div className="col-span-3 py-10 md:col-span-2 lg:max-w-[72%] 2xl:col-span-2 2xl:max-w-[80%]">
+      <p className="highlight-content lg:highlight-content-lg 2xl:highlight-content-2xl">
         <span
           className={`${
             lineShow === 1 && "text-white"
@@ -22,7 +22,7 @@ export default function Content({ lineShow }: props) {
           It’s why we make backpack that take the pressure off.
         </span>
       </p>
-      <p className="text-[2.375rem] font-semibold leading-[1.26]">
+      <p className="highlight-content lg:highlight-content-lg 2xl:highlight-content-2xl">
         <span
           className={`${
             lineShow === 3 && "text-white"
