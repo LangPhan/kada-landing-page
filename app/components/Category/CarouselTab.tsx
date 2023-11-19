@@ -31,7 +31,7 @@ const CarouselTab: React.FC<CarouselTabProps> = () => {
 
   const imageList = [
     {
-      url: "https://github.com/LangPhan/kada-landing-page/blob/main/public/balo/balo-chong-nuoc.jpg",
+      url: "https://github.com/LangPhan/kada-landing-page/blob/main/public/balo/balo-chong-nuoc.jpg?raw=true",
       title: "Women",
     },
     {
