@@ -42,7 +42,10 @@ export default function NavMobile({ isOpen, setIsOpen }: props) {
           {navList &&
             navList.map((nav, index) => {
               return (
-                <li className="font-base font-semibold text-black" key={index}>
+                <li
+                  className="font-base overflow-y-scroll font-semibold text-black"
+                  key={index}
+                >
                   <Link
                     className="flex justify-between"
                     href={`#${nav.toLowerCase().replace(" ", "")}`}

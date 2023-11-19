@@ -59,7 +59,7 @@ export default function Highlight() {
     }
   };
   return (
-    <section className="mx-10 py-10 lg:mx-24 lg:my-24 2xl:mx-32">
+    <section id="story" className="mx-10 py-10 lg:mx-24 lg:my-24 2xl:mx-32">
       <div
         className="grid grid-cols-3 gap-x-2 xl:gap-x-10 2xl:grid-cols-4 2xl:gap-0"
         ref={textRef}

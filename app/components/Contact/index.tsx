@@ -5,6 +5,7 @@ import Top from "./Top";
 export default function Contact() {
   return (
     <section
+      id="contact"
       className="relative bg-white before:absolute before:-top-[1.9375rem] before:left-0 before:h-8 before:w-full 
     before:rounded-t-3xl before:bg-white before:content-['']
      after:absolute after:-bottom-[1.9375rem] after:left-0 after:h-8 after:w-full after:rounded-b-3xl after:bg-white after:content-[''] 

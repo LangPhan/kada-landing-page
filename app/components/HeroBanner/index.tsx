@@ -4,7 +4,7 @@ import WelcomeText from "./WelcomeText";
 
 export default function HeroBannerSection() {
   return (
-    <section className="bg-hero bg-cover">
+    <section id="hero" className="bg-hero bg-cover">
       <div className="pt-64">
         <div className="flex flex-col gap-14 px-6 lg:px-12 2xl:px-[6rem] 2xl:pt-20">
           <WelcomeText />

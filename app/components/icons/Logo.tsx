@@ -11,7 +11,7 @@ export default function Logo({ variant }: props) {
       xmlnsXlink="http://www.w3.org/1999/xlink"
       viewBox="0 0 340.000000 250.000000"
       preserveAspectRatio="xMidYMid meet"
-      color-interpolation-filters="sRGB"
+      colorInterpolationFilters="sRGB"
       style={{ margin: "auto" }}
     >
       {/* {" "}
@@ -49,8 +49,8 @@ export default function Logo({ variant }: props) {
                   <g>
                     <rect
                       fill="#333"
-                      fill-opacity="0"
-                      stroke-width="2"
+                      fillOpacity="0"
+                      strokeWidth="2"
                       x="0"
                       y="0"
                       width="50"
@@ -91,8 +91,8 @@ export default function Logo({ variant }: props) {
                   <g>
                     <rect
                       fill="#333"
-                      fill-opacity="0"
-                      stroke-width="2"
+                      fillOpacity="0"
+                      strokeWidth="2"
                       x="0"
                       y="0"
                       width="50"
@@ -127,8 +127,8 @@ export default function Logo({ variant }: props) {
                   <g>
                     <rect
                       fill="#333"
-                      fill-opacity="0"
-                      stroke-width="2"
+                      fillOpacity="0"
+                      strokeWidth="2"
                       x="0"
                       y="0"
                       width="49.5969179089412"
@@ -163,8 +163,8 @@ export default function Logo({ variant }: props) {
                   <g>
                     <rect
                       fill="#333"
-                      fill-opacity="0"
-                      stroke-width="2"
+                      fillOpacity="0"
+                      strokeWidth="2"
                       x="0"
                       y="0"
                       width="50"
@@ -199,7 +199,7 @@ export default function Logo({ variant }: props) {
         </g>{" "}
         <g
           data-gra="path-slogan"
-          fill-rule=""
+          fillRule="nonzero"
           className="tp-slogan"
           fill="#fff"
           transform="translate(60.79346466064453,56)"

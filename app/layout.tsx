@@ -9,8 +9,11 @@ const poppins = Poppins({
 });
 
 export const metadata: Metadata = {
-  title: "Kada",
+  title: "Kada HomePage",
   description: "Backpack high quantity from Japan",
+  icons: {
+    icon: "",
+  },
 };
 
 export default function RootLayout({
