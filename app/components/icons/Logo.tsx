@@ -104,7 +104,6 @@ export default function Logo({ variant }: props) {
                       y="0"
                       width="50"
                       height="50"
-                      filterRes="colorsb2698416110"
                       className="image-svg-svg primary"
                       style={{ overflow: "visible" }}
                     >
@@ -176,7 +175,6 @@ export default function Logo({ variant }: props) {
                       y="0"
                       width="50"
                       height="50"
-                      filterRes="colorsb4744977041"
                       className="image-svg-svg primary"
                       style={{ overflow: "visible" }}
                     >

@@ -13,9 +13,10 @@ export default function RightMenu() {
           {rightNavList &&
             rightNavList.map((nav, index) => {
               return (
-                <Link 
-                key={index}
-                href={`#${nav.toLowerCase().replace(" ", "")}`}>
+                <Link
+                  key={index}
+                  href={`#${nav.toLowerCase().replace(" ", "")}`}
+                >
                   <li
                     className="hover:after:scale-1000 relative flex h-full w-fit cursor-pointer items-center transition-transform duration-200 after:absolute after:bottom-4
                   after:right-[50%] after:hidden after:translate-x-[50%] after:text-xs after:transition-all after:content-['o'] hover:-translate-y-2 hover:after:block"

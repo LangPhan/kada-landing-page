@@ -3,7 +3,6 @@ import Content from "./Content";
 import FrameImage from "./FrameImage";
 import { useEffect, useRef, useState } from "react";
 import ImageList from "./ImageList";
-
 export type ImageType = {
   id: number;
   url: string;
@@ -41,13 +40,13 @@ export default function Highlight() {
       let medium: number = height / 4;
       let top: number = textProperty.top + textProperty.x;
 
-      if (height - medium < top && top < height) {
+      if (height - medium < top && top <= height) {
         return setLineShow(1);
       }
-      if (height - 2 * medium < top && top < height - medium) {
+      if (height - 2 * medium < top && top <= height - medium) {
         return setLineShow(2);
       }
-      if (height - 3 * medium < top && top < height - 2 * medium) {
+      if (height - 3 * medium < top && top <= height - 2 * medium) {
         return setLineShow(3);
       }
       if (top < height - 3 * medium && top > 0) {
@@ -58,12 +57,14 @@ export default function Highlight() {
       return setLineShow(0);
     }
   };
+
   return (
-    <section id="story" className="mx-10 py-10 lg:mx-24 lg:my-24 2xl:mx-32">
-      <div
-        className="grid grid-cols-3 gap-x-2 xl:gap-x-10 2xl:grid-cols-4 2xl:gap-0"
-        ref={textRef}
-      >
+    <section
+      id="story"
+      className="mx-10 py-10 lg:mx-24 lg:my-24 2xl:mx-32"
+      ref={textRef}
+    >
+      <div className="grid grid-cols-3 gap-x-2 xl:gap-x-10 2xl:grid-cols-4 2xl:gap-0">
         <FrameImage imageList={imageList} imageNumber={lineShow} />
         <Content lineShow={lineShow} />
         <ImageList imageList={imageList} imageNumber={lineShow} />

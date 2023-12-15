@@ -20,8 +20,8 @@ export default function NavMobile({ isOpen, setIsOpen }: props) {
   return (
     <nav
       className={`${
-        isOpen ? "block" : "hidden"
-      } fixed bottom-6 left-4 right-4 top-6 z-[310] mx-auto h-[90%] w-[90%] rounded-3xl bg-white shadow-lg transition-all`}
+        isOpen ? "visible opacity-100" : "invisible opacity-0"
+      } fixed bottom-6 left-4 right-4 top-6 z-[310] mx-auto h-[90%] w-[90%] rounded-3xl bg-white shadow-2xl transition-opacity duration-[850ms] ease-in-out`}
     >
       <div className="m-h-[88px] relative flex items-center justify-center py-6">
         <a
@@ -38,17 +38,15 @@ export default function NavMobile({ isOpen, setIsOpen }: props) {
         </button>
       </div>
       <div className="px-10">
-        <ul className="space-y-8">
+        <ul className="space-y-8 overflow-hidden">
           {navList &&
             navList.map((nav, index) => {
               return (
-                <li
-                  className="font-base overflow-y-scroll font-semibold text-black"
-                  key={index}
-                >
+                <li className="font-base font-semibold text-black" key={index}>
                   <Link
                     className="flex justify-between"
                     href={`#${nav.toLowerCase().replace(" ", "")}`}
+                    onClick={() => setIsOpen(false)}
                   >
                     <span>{nav}</span>
                     <span>

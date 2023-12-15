@@ -9,10 +9,10 @@ const poppins = Poppins({
 });
 
 export const metadata: Metadata = {
-  title: "Kada HomePage",
+  title: "Kada | Homepage",
   description: "Backpack high quantity from Japan",
   icons: {
-    icon: "",
+    icon: "./favicon.png",
   },
 };
 
