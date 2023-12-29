@@ -13,7 +13,7 @@ export default function Album({ listImages, item, setItem }: props) {
   return (
     <div className="width-[90.21%] relative ml-auto block lg:w-full lg:justify-start lg:gap-4 xl:flex">
       <img
-        className="mb-4 w-full rounded-[1.5rem] lg:aspect-[3/4]"
+        className="mb-4 min-h-[750px] w-full rounded-[1.5rem] lg:aspect-[3/4] lg:max-w-[90%]"
         src={item.big}
         alt="image"
       />
@@ -36,13 +36,20 @@ export default function Album({ listImages, item, setItem }: props) {
           );
         })}
       </div>
-      <div className="absolute -left-6 top-8 ml-2 aspect-[3.5/4] w-[40%] rounded-lg border-[3px] border-white bg-white sm:-left-8 md:hidden">
-        <img
-          className="aspect-[3.5/4] w-full rounded-lg"
-          src="https://www.rollienation.com/cdn/shop/files/Men_78afae33-0da4-4908-910b-d6177235d722_550x.jpg?v=1655780752"
-          alt="image"
-        />
-      </div>
+      {/* {listImages.map((image) => {
+        return (
+          <div
+            className="absolute -left-6 top-8 ml-2 aspect-[3.5/4] w-[40%] rounded-lg border-[3px] border-white bg-white sm:-left-8 md:hidden"
+            key={image.id}
+          >
+            <img
+              className="aspect-[3.5/4] w-full rounded-lg"
+              src={image.medium}
+              alt="image"
+            />
+          </div>
+        );
+      })} */}
     </div>
   );
 }

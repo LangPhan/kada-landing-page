@@ -10,6 +10,7 @@ export default function Header() {
   const { scrollY } = useScroll();
   const [isScrollUp, setIsScrollUp] = useState(false);
   const [currentPos, setCurrentPos] = useState(0);
+  const [isOpenNav, setIsOpenNav] = useState(false);
 
   useMotionValueEvent(scrollY, "change", (latest) => {
     if (currentPos > latest && scrollY.get() > 50) {
@@ -22,12 +23,12 @@ export default function Header() {
   return (
     <header
       className={`${
-        isScrollUp
-          ? "fixed top-10 rounded-3xl bg-slate-400 transition-all "
+        isScrollUp && !isOpenNav
+          ? "background-wrapper fixed top-10 max-w-[95%] translate-x-[2.5%] rounded-3xl shadow-md"
           : "absolute top-0"
-      } z-50 mx-auto grid h-[85px] w-full grid-cols-3 px-4 text-[16px] font-semibold leading-[1.4] text-white lg:px-12`}
+      } z-50 mx-auto grid h-[70px] w-full grid-cols-3 px-4 text-[16px] font-semibold leading-[1.4] text-white transition-all duration-500 lg:px-12`}
     >
-      <LeftMenu />
+      <LeftMenu isOpenNav={isOpenNav} setIsOpenNav={setIsOpenNav} />
       <CenterMenu />
       <RightMenu />
     </header>

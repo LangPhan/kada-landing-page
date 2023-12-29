@@ -1,6 +1,8 @@
 "use client";
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import Card from "./Card";
+import databases from "@/app/database";
+import { memo } from "react";
 
 interface CarouselTabProps {}
 
@@ -29,24 +31,19 @@ const CarouselTab: React.FC<CarouselTabProps> = () => {
     }
   };
 
-  const imageList = [
-    {
-      url: "https://images.unsplash.com/photo-1520466809213-7b9a56adcd45?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NDh8fGJhY2twYWNrfGVufDB8fDB8fHww",
-      title: "Women",
-    },
-    {
-      url: "https://images.unsplash.com/photo-1520466809213-7b9a56adcd45?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NDh8fGJhY2twYWNrfGVufDB8fDB8fHww",
-      title: "Women",
-    },
-    {
-      url: "https://images.unsplash.com/photo-1520466809213-7b9a56adcd45?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NDh8fGJhY2twYWNrfGVufDB8fDB8fHww",
-      title: "Women",
-    },
-    {
-      url: "https://images.unsplash.com/photo-1520466809213-7b9a56adcd45?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NDh8fGJhY2twYWNrfGVufDB8fDB8fHww",
-      title: "Women",
-    },
-  ];
+  const [imageList, setImageList] = useState<any>([]);
+  useEffect(() => {
+    const db = databases.listDocuments("658e89bbb8f852147120", "category");
+    db.then(
+      function (response) {
+        return setImageList([...response.documents]);
+      },
+      function (error) {
+        console.log(error);
+      },
+    );
+  }, []);
+
   return (
     <div
       className="scrollable h-full cursor-grab select-none snap-mandatory scroll-p-7 overflow-y-hidden scroll-smooth whitespace-nowrap px-6"
@@ -57,11 +54,11 @@ const CarouselTab: React.FC<CarouselTabProps> = () => {
       onMouseMove={handleMouseMove}
     >
       {imageList &&
-        imageList.map((item, index) => {
-          return <Card key={index} image={item.url} title={item.title} />;
+        imageList.map((item: any, index: number) => {
+          return <Card key={index} image={item.image} title={item.title} />;
         })}
     </div>
   );
 };
 
-export default CarouselTab;
+export default memo(CarouselTab);

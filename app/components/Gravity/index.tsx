@@ -15,25 +15,27 @@ export default function Gravity() {
   const items: Item[] = [
     {
       id: 1,
-      big: "https://www.rollienation.com/cdn/shop/files/Men_78afae33-0da4-4908-910b-d6177235d722_550x.jpg?v=1655780752",
+      big: "https://product.hstatic.net/200000135949/product/10_48f424b593494750b92df82243da8d14_master.jpg",
       medium:
-        "https://www.rollienation.com/cdn/shop/files/Men_78afae33-0da4-4908-910b-d6177235d722_550x.jpg?v=1655780752",
+        "https://product.hstatic.net/200000135949/product/web3_9758eeea7e8b41eea7f543b603829893_master.jpg",
       small:
-        "https://github.com/LangPhan/kada-landing-page/blob/main/public/balo/balo-hoc-sinh.jpg?raw=true",
+        "https://product.hstatic.net/200000135949/product/web2_4c4f55ae34784a1e8959b5452ebecda1_master.jpg",
     },
     {
       id: 2,
-      big: "https://www.rollienation.com/cdn/shop/files/Womens-mobile_550x.jpg?v=1657253928",
-      medium: "",
+      big: "https://product.hstatic.net/200000135949/product/scar_0358_9e8261fd6d624ff1983f667752bf0eb6_master.jpg",
+      medium:
+        "https://product.hstatic.net/200000135949/product/3_82fb06cd4ad1479fbd72596fbf434ded_master.jpg",
       small:
-        "https://www.rollienation.com/cdn/shop/files/Homepage-Focus-Image-Weekender-Pastel-Leopard_955f54b1-fa5f-4da3-b0be-d7d8fa719328_414x.png?v=1680505213",
+        "https://product.hstatic.net/200000135949/product/2_40b7bb7288c74e2287c084b8ba9e14b1_master.jpg",
     },
     {
       id: 3,
-      big: "https://www.rollienation.com/cdn/shop/files/derby-mobile_8d34df91-19ca-487f-a37a-ecd34bd9a150_550x.jpg?v=1655780629",
-      medium: "",
+      big: "https://product.hstatic.net/200000135949/product/6_e1e3e397831c45f7a2070d85e668c950_master.jpg",
+      medium:
+        "https://product.hstatic.net/200000135949/product/3_3e56303ba0244fe08e47320597280227_master.jpg",
       small:
-        "https://www.rollienation.com/cdn/shop/files/Homepage-Focus-Image-Weekender-Pastel-Leopard_955f54b1-fa5f-4da3-b0be-d7d8fa719328_414x.png?v=1680505213",
+        "https://product.hstatic.net/200000135949/product/1_d8d91000e5e54adb814ee4418069468a_master.jpg",
     },
   ];
   const [item, setItem] = useState<Item>(items[0]);

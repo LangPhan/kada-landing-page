@@ -1,11 +1,13 @@
 "use client";
-import { useState } from "react";
+import { Dispatch, SetStateAction } from "react";
 import { MenuIcon } from "../icons/MenuIcon";
 import NavMobile from "./NavMobile";
 import Link from "next/link";
-
-export default function LeftMenu() {
-  const [isOpenNav, setIsOpenNav] = useState(false);
+type props = {
+  isOpenNav: boolean;
+  setIsOpenNav: Dispatch<SetStateAction<boolean>>;
+};
+export default function LeftMenu({ isOpenNav, setIsOpenNav }: props) {
   const leftNavList: String[] = [
     "Hero",
     "Categories",
@@ -16,7 +18,7 @@ export default function LeftMenu() {
   return (
     <>
       <div className="flex w-full items-center justify-start gap-2 xl:hidden">
-        <button onClick={() => setIsOpenNav(true)}>
+        <button aria-label="Menu" onClick={() => setIsOpenNav(true)}>
           <MenuIcon variant="h-8 w-8 transition-all hover:rotate-90" />
         </button>
         <NavMobile isOpen={isOpenNav} setIsOpen={setIsOpenNav} />
