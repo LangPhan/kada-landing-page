@@ -13,7 +13,7 @@ export default function Album({ listImages, item, setItem }: props) {
   return (
     <div className="width-[90.21%] relative ml-auto block lg:w-full lg:justify-start lg:gap-4 xl:flex">
       <img
-        className="mb-4 min-h-[750px] w-full rounded-[1.5rem] lg:aspect-[3/4] lg:max-w-[90%]"
+        className="mb-4 min-h-[650px] w-full rounded-[1.5rem] lg:aspect-[3/4] lg:max-w-[90%] xl:min-h-[750px]"
         src={item.big}
         alt="image"
       />

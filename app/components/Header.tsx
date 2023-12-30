@@ -24,7 +24,7 @@ export default function Header() {
     <header
       className={`${
         isScrollUp && !isOpenNav
-          ? "background-wrapper fixed top-10 max-w-[95%] translate-x-[2.5%] rounded-3xl shadow-md"
+          ? "background-wrapper fixed left-[2.5%] top-10 max-w-[95%] rounded-3xl shadow-md"
           : "absolute top-0"
       } z-50 mx-auto grid h-[70px] w-full grid-cols-3 px-4 text-[16px] font-semibold leading-[1.4] text-white transition-all duration-500 lg:px-12`}
     >

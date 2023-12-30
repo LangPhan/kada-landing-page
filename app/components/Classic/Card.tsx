@@ -10,7 +10,7 @@ export default function Card({ image }: { image: Image }) {
       key={image.id}
       onMouseEnter={() => setIsBackShow(true)}
       onMouseLeave={() => setIsBackShow(false)}
-      className="relative mb-4 aspect-[1/1.1] w-full rounded-2xl bg-white hover:cursor-pointer"
+      className="relative mb-4 aspect-[1/1.1] w-full rounded-2xl bg-white transition-all hover:cursor-pointer"
     >
       <img
         className={`absolute inset-0 h-full w-full rounded-2xl object-fill ${
