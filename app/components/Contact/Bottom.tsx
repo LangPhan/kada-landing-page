@@ -6,13 +6,15 @@ export default function Bottom() {
           className="animate-floatDown rounded-3xl object-cover"
           src="https://www.rollienation.com/cdn/shop/files/influencer-3_224x.webp?v=1659490508"
           alt="Image"
+          loading="lazy"
         />
       </div>
-      <div className="animate-floatUp w-[120px] rounded-3xl xl:w-[240px]">
+      <div className="w-[120px] animate-floatUp rounded-3xl xl:w-[240px]">
         <img
           className="rounded-3xl object-cover"
           src="https://www.rollienation.com/cdn/shop/files/influencer-4_280x.webp?v=1659490523"
           alt="Image"
+          loading="lazy"
         />
       </div>
     </div>

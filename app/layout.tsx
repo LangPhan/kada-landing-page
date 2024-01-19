@@ -11,6 +11,8 @@ const poppins = Poppins({
 export const metadata: Metadata = {
   title: "Kada | Homepage",
   description: "Backpack high quantity from Japan",
+  authors: [{ name: "Kada Company", url: "kada.vn" }],
+  keywords: ["kada", "backpack", "bag"],
   icons: {
     icon: "./favicon.png",
   },

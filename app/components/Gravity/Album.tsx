@@ -1,5 +1,6 @@
 import { Dispatch, SetStateAction } from "react";
 import { Item } from ".";
+import { url } from "inspector";
 
 type props = {
   listImages: Item[];
@@ -11,12 +12,11 @@ export default function Album({ listImages, item, setItem }: props) {
     setItem(listImages[id - 1]);
   };
   return (
-    <div className="width-[90.21%] relative ml-auto block lg:w-full lg:justify-start lg:gap-4 xl:flex">
-      <img
-        className="mb-4 min-h-[650px] w-full rounded-[1.5rem] lg:aspect-[3/4] lg:max-w-[90%] xl:min-h-[750px]"
-        src={item.big}
-        alt="image"
-      />
+    <div className="relative ml-auto block w-full lg:justify-start lg:gap-4 xl:flex">
+      <div
+        className="mb-2 min-h-[650px] w-[100%]  rounded-[1.5rem] bg-cover bg-center lg:max-w-[90%] xl:min-h-[750px]"
+        style={{ backgroundImage: `url(${item.big})` }}
+      ></div>
       <div className="flex justify-end gap-4 xl:flex-col xl:justify-center">
         {listImages.map((image) => {
           return (
@@ -29,6 +29,7 @@ export default function Album({ listImages, item, setItem }: props) {
             >
               <img
                 className="aspect-square w-[92%] translate-x-[4%] translate-y-[4%] rounded-full border-2 border-white"
+                loading="lazy"
                 src={image.small}
                 alt="image"
               />
@@ -36,20 +37,6 @@ export default function Album({ listImages, item, setItem }: props) {
           );
         })}
       </div>
-      {/* {listImages.map((image) => {
-        return (
-          <div
-            className="absolute -left-6 top-8 ml-2 aspect-[3.5/4] w-[40%] rounded-lg border-[3px] border-white bg-white sm:-left-8 md:hidden"
-            key={image.id}
-          >
-            <img
-              className="aspect-[3.5/4] w-full rounded-lg"
-              src={image.medium}
-              alt="image"
-            />
-          </div>
-        );
-      })} */}
     </div>
   );
 }

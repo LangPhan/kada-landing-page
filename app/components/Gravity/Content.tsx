@@ -17,9 +17,10 @@ export default function Content({ url }: props) {
       </p>
       <div className="lg:width-c-lg 2xl:width-c-2xl my-0 ml-auto mr-0 hidden aspect-[3.5/4] w-[90.21%] text-base font-medium md:block 2xl:text-xl">
         <img
-          className="aspect-[3.5/4] w-full rounded-xl"
+          className="w-full rounded-xl object-contain"
           src={url}
           alt="image"
+          loading="lazy"
         />
       </div>
     </div>
